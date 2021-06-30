@@ -8,14 +8,14 @@ public class ClientsResponse {
 	private final String text;
 	private final String type;
 	private final String user;
-	private final String upvotes;
+	private final int upvotes;
 	
 	public ClientsResponse(
 			@JsonProperty("id") String id,
 			@JsonProperty("text") String text,
 			@JsonProperty("type") String type,
 			@JsonProperty("user") String user,
-			@JsonProperty("upvotes") String upvotes
+			@JsonProperty("upvotes") int upvotes
 	) throws UnsupportedEncodingException {
 		this.id = id;
 		this.text = text = new String (text.getBytes("UTF-8"),"cp1251");
@@ -40,7 +40,7 @@ public class ClientsResponse {
 		return user;
 	}
 	
-	public String getUpvotes() {
+	public int getUpvotes() {
 		return upvotes;
 	}
 	
