@@ -8,7 +8,7 @@ public class ClientsResponse {
 	private final String text;
 	private final String type;
 	private final String user;
-	private final int upvotes;
+	private final Integer upvotes;
 	
 	public ClientsResponse(
 			@JsonProperty("id") String id,
@@ -40,7 +40,7 @@ public class ClientsResponse {
 		return user;
 	}
 	
-	public int getUpvotes() {
+	public Integer getUpvotes() {
 		return upvotes;
 	}
 	

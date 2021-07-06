@@ -30,7 +30,7 @@ public class Main {
 				, new TypeReference<List<ClientsResponse>>() {});
 		
 		List<ClientsResponse> sortResponse = clientsResponseList.stream()
-				.filter(value -> value.getUpvotes() > 0)
+				.filter(value -> value.getUpvotes() > 0 && value.getUpvotes() != null)
 				.collect(Collectors.toList());
 		sortResponse.forEach(System.out::println);
 	}
